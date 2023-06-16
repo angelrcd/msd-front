@@ -33,7 +33,8 @@ function Calendario () {
   function handleDayClick (value, event) {
     setIsShowingDay(true)
     const date = new Date(value)
-    date.setHours(1)
+    date.setHours(2)
+    console.log(date)
     const options = {
       credentials: 'include',
       method: 'POST',

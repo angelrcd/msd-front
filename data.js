@@ -19,8 +19,8 @@ export const PSW_REGEX_2 =
 export const LANDING_URL = "/";
 // export const LANDING_URL = 'https://mysweetdreams.es'
 export const IMAGES_URL = "https://img.mysweetdreams.es/img/pfp/";
-const API_URL = "https://mysweetdreamsapi.azurewebsites.net";
-// const API_URL = "https://api.mysweetdreams.es";
+// const API_URL = "https://mysweetdreamsapi.azurewebsites.net";
+const API_URL = "http://localhost:3000";
 
 export const API = {
   USERS: {

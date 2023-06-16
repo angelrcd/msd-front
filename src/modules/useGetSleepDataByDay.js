@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { API } from '../../data'
 
 export function useGetUserSleepDataByDay (day) {
+  console.log(day)
   const options = {
     credentials: 'include',
     method: 'POST',
