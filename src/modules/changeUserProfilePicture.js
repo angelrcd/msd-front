@@ -1,4 +1,4 @@
-import { API, IMAGES_URL } from '../../data'
+import { API } from '../../data'
 
 export function changeDBUserProfilePic (userId) {
   const options = {
@@ -7,25 +7,22 @@ export function changeDBUserProfilePic (userId) {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ profilePic: userId + '.png' })
+    body: JSON.stringify({ profilePic: userId })
   }
 
   fetch(API.USERS.MY_USER, options)
 }
 
 export function uploadPicToServer (picture, userId) {
-  const blob = picture.slice(0, picture.size, 'image/png')
-  const newFile = new File([blob], userId + '.png', { type: 'image/png' })
   const options = {
     mode: 'cors',
     credentials: 'include',
     method: 'PUT',
     headers: {
-      'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*'
     },
-    body: newFile
+    body: picture
   }
-  console.log(newFile)
-  fetch(IMAGES_URL, options)
+  console.log(API.USERS.PROFILE_PIC)
+  fetch(API.USERS.PROFILE_PIC, options)
 }

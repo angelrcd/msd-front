@@ -8,11 +8,11 @@ import 'moment/locale/es'
 
 function UserInfo () {
   const handleImage = (pfp) => {
-    setImage('https://img.mysweetdreams.es/img/pfp/' + pfp)
+    setImage('https://msdstoragearc.blob.core.windows.net/profile/' + pfp)
   }
 
   const { userData, isLoading, error } = useGetUserData(handleImage)
-  const [image, setImage] = useState('https://img.mysweetdreams.es/img/pfp/' + userData.profilePic)
+  const [image, setImage] = useState('https://msdstoragearc.blob.core.windows.net/profile/' + userData.profilePic)
 
   const fileInput = useRef()
   const selectFile = () => {
@@ -24,7 +24,9 @@ function UserInfo () {
     if (event.target.files && event.target.files[0]) {
       changeDBUserProfilePic(userData._id)
       setImage(URL.createObjectURL(event.target.files[0]))
-      uploadPicToServer(event.target.files[0], userData._id)
+      const formData = new FormData()
+      formData.append('image', event.target.files[0])
+      uploadPicToServer(formData, userData._id)
     }
   }
 
