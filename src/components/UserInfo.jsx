@@ -5,14 +5,15 @@ import { Oval } from 'react-loader-spinner'
 import { changeDBUserProfilePic, uploadPicToServer } from '../modules/changeUserProfilePicture'
 import moment from 'moment'
 import 'moment/locale/es'
+import { IMAGES_URL } from '../../data'
 
 function UserInfo () {
   const handleImage = (pfp) => {
-    setImage('https://msdstoragearc.blob.core.windows.net/profile/' + pfp)
+    setImage(IMAGES_URL + pfp)
   }
 
   const { userData, isLoading, error } = useGetUserData(handleImage)
-  const [image, setImage] = useState('https://msdstoragearc.blob.core.windows.net/profile/' + userData.profilePic)
+  const [image, setImage] = useState(IMAGES_URL + userData.profilePic)
 
   const fileInput = useRef()
   const selectFile = () => {

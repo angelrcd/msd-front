@@ -18,7 +18,7 @@ export const PSW_REGEX_2 =
 
 export const LANDING_URL = '/'
 // export const LANDING_URL = 'https://mysweetdreams.es'
-export const IMAGES_URL = 'https://msdstoragearc.blob.core.windows.net/profile/'
+export const IMAGES_URL = 'https://msdstoragearc1.blob.core.windows.net/user-pfp/'
 // const API_URL = "https://mysweetdreamsapi.azurewebsites.net";
 const API_URL = 'http://localhost:3000'
 
