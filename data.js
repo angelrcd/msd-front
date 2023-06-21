@@ -20,7 +20,7 @@ export const LANDING_URL = '/'
 // export const LANDING_URL = 'https://mysweetdreams.es'
 export const IMAGES_URL = 'https://msdstoragearc1.blob.core.windows.net/user-pfp/'
 // const API_URL = "https://mysweetdreamsapi.azurewebsites.net";
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://msdapiarc.azurewebsites.net'
 
 export const API = {
   USERS: {
