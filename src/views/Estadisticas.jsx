@@ -1,4 +1,3 @@
-import '../css/Estadisticas.css'
 import Grafica from '../components/Grafica.jsx'
 import GraficaLineal from '../components/GraficaLineal'
 import GraficaTest from '../components/GraficaTest'

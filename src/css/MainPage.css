@@ -21,7 +21,7 @@
 
 @layer components {
   .button-web {
-    @apply font-quicksand font-bold w-fit px-4 sm:px-10 py-2 text-lg sm:text-2xl bg-web-boton hover:bg-web-boton2 hover:text-white rounded-2xl sm:rounded-full mb-10 shadow-lg duration-500 ease-in-out hover:resize hover:ring-2 ring-offset-4 hover:scale-105 ring-web-boton;
+    @apply font-quicksand font-bold w-fit px-6 sm:px-10 py-2 text-lg sm:text-2xl bg-web-boton hover:bg-web-boton2 hover:text-white rounded-2xl sm:rounded-full mb-10 shadow-lg duration-500 ease-in-out hover:resize hover:ring-2 ring-offset-4 hover:scale-105 ring-web-boton;
   }
   .navVisible {
     @apply fixed duration-300;
@@ -58,6 +58,12 @@
 -1px -1px 0 #000;
 }
 
+@media (prefers-color-scheme: dark) {
+  .svg {
+    filter: invert(98%) sepia(1%) saturate(1556%) hue-rotate(187deg) brightness(98%) contrast(91%);
+  }
+}
+
 .social:hover {
   filter: invert(48%) sepia(35%) saturate(923%) hue-rotate(183deg) brightness(77%) contrast(102%);
 }
@@ -65,4 +71,8 @@
 nav > ul >li {
   list-style: none;
   display: inline;
+}
+
+.react-calendar {
+  width: 100vw;
 }

@@ -5,8 +5,8 @@ function Description () {
   return (
     <body className= "font-quicksand bg-fixed bg-cover bg-[url('/img/background-night.jpg')]" id="Description">
       <div id="info" className="h-auto flex flex-col justify-center bg-slate-300 dark:bg-[#1b1b32] opacity-95">
-        <div className="px-56 ">
-          <h3 className="border-b-4 border-black dark:border-gray-100 py-16 px-44 text-4xl text-center font-semibold dark:text-gray-100">Una experiencia personalizada para que duermas
+        <div className="px-6 md:px-36 lg:px-44">
+          <h3 className="border-b-4 border-black dark:border-gray-100 py-16 px-6 text-2xl sm:text-3xl lg:text-4xl text-center font-semibold dark:text-gray-100">Una experiencia personalizada para que duermas
             mejor
             durante la
             noche y
